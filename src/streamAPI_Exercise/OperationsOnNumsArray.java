@@ -1,6 +1,8 @@
 package streamAPI_Exercise;
 
 import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -91,6 +93,28 @@ public class OperationsOnNumsArray {
 
         System.out.println("Any Element from the nums :: " + anyElmnt);
 
+
+//        Check all numbers from nums are possitive :
+
+
+        boolean allPositive = nums.stream()
+                .allMatch(i -> i>0);
+
+        System.out.println("all positive : " + allPositive);
+
+//
+
+        List<Integer> ages1 = Arrays.asList(11, 33, 44, 55, 33);
+        List<Integer> ages = Arrays.asList(11, 33, 44, 55, 33);
+
+        List<String> names = Arrays.asList("lubna", "salona");
+        List<String> names1 = Arrays.asList("lubna", "salona");
+
+
+        boolean ifSame = names1.stream()
+                .equals(names);
+
+        System.out.println("if ages1 == ages :: " + ifSame);
 
 
 

@@ -24,6 +24,16 @@ public class OperationsOnStringArray {
         upperCase.forEach( System.out::println);
 
 
+        List<String> fullnames = Arrays.asList("Lubna Shaikh", "Salona Shaikh", "Mahek Shaikh");
+
+
+        List<String> names = fullnames.stream()
+                .map(e -> e.split(" ")[0])
+                .toList();
+
+        System.out.println("First name :: " + names);
+
+
 
     }
 }
