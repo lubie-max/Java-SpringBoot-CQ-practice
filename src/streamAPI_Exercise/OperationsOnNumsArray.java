@@ -116,6 +116,33 @@ public class OperationsOnNumsArray {
 
         System.out.println("if ages1 == ages :: " + ifSame);
 
+// Find first
+
+
+        Optional<Integer> first = nums.stream()
+                .findFirst();
+
+        System.out.println("First elmt of nums :: " + first);
+
+
+//        Nested Map
+
+        List<List<Integer>> nestedList = Arrays.asList(Arrays.asList(1,2,5,5), Arrays.asList(4,5,7,8));
+
+        List<Integer> flattenedList = nestedList.stream()
+                .flatMap(List::stream)
+                .toList();
+        System.out.println("Flattend List :: " + flattenedList);
+
+
+
+//        Peak elmnt
+
+        List<Integer> peak = nums.stream()
+                .peek(System.out::println)
+                .toList();
+
+//        System.out.println(peak);
 
 
     }
