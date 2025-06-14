@@ -1,10 +1,8 @@
 package streamAPI_Exercise;
 
 import javax.sound.midi.Soundbank;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class OperationsOnNumsArray {
 
@@ -145,16 +143,47 @@ public class OperationsOnNumsArray {
 //        System.out.println(peak);
 
 
-//        Limiting
+//        Limiting and Sorting
 
 
         List<Integer> limitTo4 = nums.stream()
-                .sorted()
+                .sorted(Comparator.reverseOrder())
                 .limit(4)
+                .sorted()
                 .toList();
 
 
+
         System.out.println("Limiting to 4th "+ limitTo4);
+
+
+//        Skipping Elements
+
+        List<Integer> skippedElm = nums.stream()
+                .skip(5)
+                .toList();
+
+        System.out.println("Skipped first 5 elemnts : " + skippedElm);
+
+
+//        Remove Duplicates
+
+
+        Set<Integer> uniqNums = nums.stream()
+                .collect(Collectors.toSet());
+
+        System.out.println("uniq nums : "+ uniqNums);
+
+
+//        Statastics for objs
+
+        IntSummaryStatistics summaryStatistics = nums.stream()
+                .mapToInt(Integer::intValue)
+                .summaryStatistics()
+                ;
+
+        System.out.println("Summary Stats for nums : " + summaryStatistics);
+
 
 
     }
