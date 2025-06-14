@@ -145,5 +145,17 @@ public class OperationsOnNumsArray {
 //        System.out.println(peak);
 
 
+//        Limiting
+
+
+        List<Integer> limitTo4 = nums.stream()
+                .sorted()
+                .limit(4)
+                .toList();
+
+
+        System.out.println("Limiting to 4th "+ limitTo4);
+
+
     }
 }
