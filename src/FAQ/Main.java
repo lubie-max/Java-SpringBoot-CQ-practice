@@ -12,5 +12,13 @@ public class Main {
         System.out.println(reversedS);
 
 
+        CountWords cw = new CountWords();
+
+        System.out.println("Count - > " + cw.countWords("Lubna sayyadnur shaikh shaikh"));
+        System.out.println("10"+1);
+
+
+
+
     }
 }
