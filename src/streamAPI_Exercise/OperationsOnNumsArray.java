@@ -184,6 +184,17 @@ public class OperationsOnNumsArray {
 
         System.out.println("Summary Stats for nums : " + summaryStatistics);
 
+// return elements which have count >1  or duplicates
+
+
+        List<Integer> dupsElement = nums.stream()
+                .filter(x -> Collections.frequency(nums ,x )>1)
+                .distinct()
+                .collect(Collectors.toList());
+
+
+        System.out.println("Dups in nums" + dupsElement);
+
 
 
     }
