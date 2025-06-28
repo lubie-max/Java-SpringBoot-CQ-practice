@@ -143,7 +143,7 @@ public class OperationsOnNumsArray {
 //        System.out.println(peak);
 
 
-//        Limiting and Sorting
+//        Limiting and Sorting // get last 4 elements
 
 
         List<Integer> limitTo4 = nums.stream()
